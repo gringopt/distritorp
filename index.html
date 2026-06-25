@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Brook RP - Login</title>
+    <!-- Tailwind CSS para estilização rápida e idêntica -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para o ícone de chave no botão -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black h-screen w-screen flex items-center justify-center m-0 overflow-hidden select-none">
+
+    <!-- Card Central -->
+    <div class="bg-[#111214] border border-[#202225] rounded-xl p-8 w-[360px] flex flex-col items-center text-center shadow-2xl transition duration-300 hover:scale-[1.01]">
+        
+        <!-- Logo do Discord (SVG fiel ao app) -->
+        <div class="text-[#5865F2] mb-4">
+            <svg class="w-12 h-12" viewBox="0 0 127.14 96.36" fill="currentColor">
+                <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,29.88,0,105.15,105.15,0,0,0,19.4,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a74.37,74.37,0,0,0,6.71-11,68.6,68.6,0,0,1-10.64-5.12c.91-.67,1.81-1.37,2.65-2.11a75.22,75.22,0,0,0,72.76,0c.84.74,1.74,1.44,2.65,2.11a68.6,68.6,0,0,1-10.64,5.12,74.37,74.37,0,0,0,6.71,11,105.73,105.73,0,0,0,31-18.83C129.58,50.15,123.38,27.35,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/>
+            </svg>
+        </div>
+
+        <!-- Título -->
+        <h1 class="text-white text-lg font-bold mb-2 tracking-wide">
+            Portal Distrito Rp
+        </h1>
+
+        <!-- Subtítulo / Descrição -->
+        <p class="text-[#949ba4] text-[11px] leading-relaxed mb-6 px-2 font-medium">
+            Conecte-se via Discord para sincronizar seu passaporte e painéis públicos.
+        </p>
+
+        <!-- Botão de Login Funcional -->
+        <button id="btn-discord" class="w-full bg-[#5865F2] hover:bg-[#4752C4] active:bg-[#3C45A5] text-white text-xs font-semibold py-2.5 px-4 rounded transition duration-200 flex items-center justify-center gap-2 shadow-md">
+            <i class="fa-solid fa-key text-[10px] transform -rotate-45"></i>
+            Entrar com o Discord
+        </button>
+
+    </div>
+
+    <!-- Script para funcionalidade -->
+    <script>
+        document.getElementById('btn-discord').addEventListener('click', () => {
+            // Substitua a URL abaixo pelo seu link real de autenticação do bot/OAuth2 do Discord
+            const OAUTH_URL = "https://discord.com/oauth2/authorize?..."; 
+            
+            // Efeito visual de clique antes de redirecionar
+            console.log("Redirecionando para o login do Discord...");
+            
+            // Para testar, descomente a linha abaixo para redirecionar de verdade:
+            // window.location.href = OAUTH_URL;
+            
+            alert("Aqui você seria redirecionado para a autenticação segura do Discord!");
+        });
+    </script>
+</body>
+</html>
